@@ -37,7 +37,7 @@ function App() {
             {data.main ? <h1>{Math.round((data.main.temp-273.15)*1.8+32)}F</h1> : null}
           </div>
           <div className="description">
-            {data.weather ? <p>{data.weather[0].main}</p> : null}
+            {data.weather ? <p>{Math.round((data.weather[0].main-273.15)*1.8+32)}</p> : null}
             <p>Feels Like</p>
           </div>
         </div>
