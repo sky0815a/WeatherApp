@@ -1,0 +1,4 @@
+Weather notification API
+Depends on the weatehr, the APP tells you what to wear;
+for example. If its ranning, suggest raincoat & umbrella.
+Base on the weather temperature, suggest jacket, coat, or t-shirts,  etc
