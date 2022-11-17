@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios'
+import TopRight from './components/TopRight'
+
 import './App.css';
 
 
@@ -24,9 +26,8 @@ function App() {
       <div className='LeftSide'>
         {/* Left Top Block Start */}
         <div className='LeftTop'>
-          {/* <img src="./components/images/`${data.weather[0].description}`.png" alt="Left Top"/> */}
-          {/* <img src="./components/images/fewclouds.png" alt="Left Top"/> */}
-          <img src="./components/images/fewclouds.jpeg" alt="Left Top"/>
+          LeftTop
+          {/* <img src={fewclouds} alt="Left Top"/> */}
         </div>
 
         {/* Left Bottom Block Start */}
@@ -53,7 +54,7 @@ function App() {
             {data.weather ? <p>{data.weather[0].description}</p> : null}
             <p>Feels Like</p>
           </div>
-        
+
           <div className="feels">
             {data.main ? <p>{Math.round((data.main.feels_like - 273.15) * 1.8 + 32)}F</p> : null}
           </div>
@@ -73,7 +74,10 @@ function App() {
       {/* Right Side Start */}
       <div className='RightSide'>
         <div className='RightTop'>
-          Right Top
+          Top right
+          <div className="thingsToGet">
+            <TopRight />
+          </div>
         </div>
         <div className='RighBottom'>
           Right Bottom
