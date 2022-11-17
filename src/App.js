@@ -20,6 +20,7 @@ function App() {
       setLocation('')
     }
   }
+  console.log(data) 
 
   return (
     <div className="App">
@@ -51,7 +52,7 @@ function App() {
           </div>
 
           <div className="description">
-            {data.weather ? <p>{data.weather[0].description}</p> : null}
+            {data.weather ? <p>{data.weather[0].main}</p> : null}
             <p>Feels Like</p>
           </div>
 
@@ -74,9 +75,10 @@ function App() {
       {/* Right Side Start */}
       <div className='RightSide'>
         <div className='RightTop'>
-          Top right
+          Today, we have:
+          {data.weather ? <p>{data.weather[0].description} outside</p> : null}
           <div className="thingsToGet">
-            <TopRight />
+            <TopRight data={data}/>
           </div>
         </div>
         <div className='RighBottom'>

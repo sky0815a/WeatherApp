@@ -4,55 +4,50 @@ import axios from 'axios'
 
 
 
-function TopRight() {
-
-    const [data, setData] = useState({})
-    const [location, setLocation] = useState('')
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=99ea53a733d2dfeb06d4511846b3dda8`
-    // API Main Domain https://openweathermap.org/
-
-    const searchLocation = (event) => {
-        if (event.key === 'Enter') {
-            axios.get(url).then((response) => {
-                setData(response.data)
-            })
-            // Clear the Enter Box
-            setLocation('')
-        }
-    }
+function TopRight({ data }) {
+    console.log(data)
 
     // return "Get something"
-    if (data.weather[0].main === 'clear sky') {
-        return "Get sunglasses"
+    if (Object.keys(data).length > 0) {
+
+
+        if (data.weather[0].main === 'Thunderstorm') {
+            return "Try to avoid spiky metal materials when going outside, and stay indoor if possible"
+        }
+
+        else if (data.weather[0].main === 'Drizzle') {
+            return "Get an umbrella or a raincoat"
+        }
+
+        else if (data.weather[0].main === 'Rain') {
+            if (data.weather[0].description === 'light rain' ||
+                data.weather[0].description === 'moderate rain') {
+                return "Get an umbrella or a raincoat"
+            }
+            else {
+                return "Get an umbrella or a raincoat and take take extra caution if driving"
+            }
+        }
+
+        else if (data.weather[0].main === 'Snow') {
+            return "Get an umbrella or a raincoat"
+        }
+
+        else if (data.weather[0].main === 'Clouds') {
+            return "Let's cheer up with some music!"
+        }
+
+        else if (data.weather[0].main === 'Clear') {
+            return "Get sunglasses!"
+        }
+
+        else {
+            return "gettign something"
+        }
     }
-
-    // else if (data.weather[0].main === 'rain') {
-    //     return "Get an unbrella or a raincoat"
-    // }
-
-    // else if (data.weather[0].main === 'rain') {
-    //     return "Get an unbrella or a raincoat"
-    // }
-
-    // else if (data.weather[0].main === 'rain') {
-    //     return "Get an unbrella or a raincoat"
-    // }
-
-    // else if (data.weather[0].main === 'rain') {
-    //     return "Get an unbrella or a raincoat"
-    // }
-
-    // else if (data.weather[0].main === 'rain') {
-    //     return "Get an unbrella or a raincoat"
-    // }
-
-    // else if (data.weather[0].main === 'rain') {
-    //     return "Get an unbrella or a raincoat"
-    // }
-
-    // else if (data.weather[0].main === 'rain') {
-    //     return "Get an unbrella or a raincoat"
-    // }
+    else {
+        return <div></div>
+    }
 }
 
 
