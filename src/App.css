@@ -28,20 +28,28 @@
 .LeftTop {
   margin: 10px; 
   border: 1px solid black;
+  min-width: 400px;
+  min-height: 250px;
 }
 
 .LeftBottom
  {
   margin: 10px; 
   border: 1px solid black;
+  min-width: 400px;
+  min-height: 250px;
 }
 
 .RightTop {
   margin: 10px; 
   border: 1px solid black;
+  min-width: 400px;
+  min-height: 250px;
 }
 
 .RightBottom {
   margin: 10px; 
   border: 1px solid black;
+  min-width: 400px;
+  min-height: 250px;
 }

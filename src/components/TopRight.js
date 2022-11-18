@@ -40,7 +40,7 @@ function TopRight({ data }) {
         }
 
         else {
-            return ""
+            return <div></div>
         }
     }
     else {

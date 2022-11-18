@@ -3,6 +3,7 @@ import axios from 'axios'
 import TopRight from './components/TopRight'
 import RightBottomTempWarning from './components/RightBottomTempWarning'
 import RightBottomRainCheck from './components/RightBottomRainCheck'
+import Images from './components/Images'
 import './App.css';
 
 
@@ -25,11 +26,11 @@ function App() {
 
   return (
     <div className="App">
-      <div className='Header'>Header</div>
+      <h1 className='Header'>Weather APP</h1>
       <div className='main'>
         {/* Left Top Components Start */}
         <div className='LeftTop'>
-          {/* <img src={fewclouds} alt="Left Top"/> */}
+          <Images data={data} />
         </div>
 
         {/* Right Top Components Start */}
