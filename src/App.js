@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios'
 import TopRight from './components/TopRight'
-
+import RightBottomTempWarning from './components/RightBottomTempWarning'
+import RightBottomRainCheck from './components/RightBottomRainCheck'
 import './App.css';
 
 
@@ -20,15 +21,24 @@ function App() {
       setLocation('')
     }
   }
-  console.log(data) 
+  console.log(data)
 
   return (
     <div className="App">
-      <div className='LeftSide'>
-        {/* Left Top Block Start */}
+      <div className='Header'>Header</div>
+      <div className='main'>
+        {/* Left Top Components Start */}
         <div className='LeftTop'>
-          LeftTop
           {/* <img src={fewclouds} alt="Left Top"/> */}
+        </div>
+
+        {/* Right Top Components Start */}
+        <div className='RightTop'>
+          <div>Today, we have:</div>
+          <div>{data.weather ? <p>{data.weather[0].description} outside</p> : null}</div>
+          <div className="thingsToGet">
+            <TopRight data={data} />
+          </div>
         </div>
 
         {/* Left Bottom Block Start */}
@@ -48,16 +58,11 @@ function App() {
 
           {/* F = (K - 273.15) * 1.8 + 32 */}
           <div className="temp">
-            {data.main ? <h1>{Math.round((data.main.temp - 273.15) * 1.8 + 32)}F</h1> : null}
+            {data.main ? <h1>{Math.round((data.main.temp - 273.15) * 1.8 + 32)}F°</h1> : null}
           </div>
 
           <div className="description">
             {data.weather ? <p>{data.weather[0].main}</p> : null}
-            <p>Feels Like</p>
-          </div>
-
-          <div className="feels">
-            {data.main ? <p>{Math.round((data.main.feels_like - 273.15) * 1.8 + 32)}F</p> : null}
           </div>
 
           <div className='humidity'>
@@ -70,28 +75,25 @@ function App() {
             <p>Wind Speed</p>
           </div>
         </div>
-      </div>
-
-      {/* Right Side Start */}
-      <div className='RightSide'>
-        <div className='RightTop'>
-          Today, we have:
-          {data.weather ? <p>{data.weather[0].description} outside</p> : null}
+        
+        <div className='RightBottom'>
+          <div>Today, it feels like</div>
+          <div className="feels">
+            {data.main ? <h1>{Math.round((data.main.feels_like - 273.15) * 1.8 + 32)}F°</h1> : null}
+          </div>
           <div className="thingsToGet">
-            <TopRight data={data}/>
+            <RightBottomTempWarning data={data} />
+            <RightBottomRainCheck data={data} />
           </div>
         </div>
-        <div className='RighBottom'>
-          Right Bottom
-        </div>
       </div>
+      <div className='footer'>Footer</div>
     </div>
-
   );
 }
 
 export default App;
 
 
-// Reference 33min
+
 // https://www.youtube.com/watch?v=UjeXpct3p7M&ab_channel=CodeCommerce

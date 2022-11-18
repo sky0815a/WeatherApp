@@ -1,27 +1,47 @@
-.App {
-  display: flex
+.Header {
+  text-align: center;
 }
-.LeftSide {
-  width: 860px;
-  height: 1080px;
-  border: 1px solid black;
+
+.footer {
+  text-align: center;
+}
+.main {
+  margin-left: 40px;
+  align-content: center;
+  min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.main > div {
+  display: flex; 
+  flex-basis: calc(50% - 40px);  
+  justify-content: center;
+  flex-direction: column;
+}
+.main > div > div {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 }
 
 .LeftTop {
-  width: 860px;
-  height: 540PX;
+  margin: 10px; 
   border: 1px solid black;
 }
 
-.RightSide {
-  width: 860px;
-  height: 1080px;
+.LeftBottom
+ {
+  margin: 10px; 
   border: 1px solid black;
 }
 
 .RightTop {
-  width: 860px;
-  height: 540PX;
+  margin: 10px; 
   border: 1px solid black;
+}
 
+.RightBottom {
+  margin: 10px; 
+  border: 1px solid black;
 }
