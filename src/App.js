@@ -88,7 +88,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div className='footer'>Footer</div>
+      {/* <div className='footer'>Footer Not Deployed at this time</div> */}
     </div>
   );
 }
