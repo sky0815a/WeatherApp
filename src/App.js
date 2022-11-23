@@ -57,7 +57,7 @@ function App() {
             <p>{data.name}</p>
           </div>
 
-          {/* F = (K - 273.15) * 1.8 + 32 */}
+          {/* Converting Temp Unit, F = (K - 273.15) * 1.8 + 32 */}
           <div className="temp">
             {data.main ? <h1>{Math.round((data.main.temp - 273.15) * 1.8 + 32)}F°</h1> : null}
           </div>
@@ -94,7 +94,3 @@ function App() {
 }
 
 export default App;
-
-
-
-// https://www.youtube.com/watch?v=UjeXpct3p7M&ab_channel=CodeCommerce

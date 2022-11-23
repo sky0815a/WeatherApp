@@ -40,6 +40,14 @@ function Images({ data }) {
                 />
         }
 
+        else if (data.weather[0].main === 'Mist') {
+            return <img className="image"
+                src="https://i.imgur.com/TBCm6bV.jpeg"
+                width="400" height="250"
+                alt="Clear"
+                />
+        }
+
         else {
             return <div></div>
         }
