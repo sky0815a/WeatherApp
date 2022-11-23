@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+Weather App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Description
 
-## Available Scripts
+A weather app that remind you not only the weather but also relevant outfits or things for today.
 
-In the project directory, you can run:
+## Project Links
 
-### `npm start`
+- https://github.com/sky0815a/WeatherApp
+- https://weather-app-sky0815a.vercel.app/
+- [demo recording]()
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Wireframes & React Component Hierarchy
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Upload images of wireframes and component hierarchy to cloudinary (or similar) and add the link here with a description of the specific wireframe.
 
-### `npm test`
+- [wireframes]
+    https://i.imgur.com/QUsAxBN.png
+    https://i.imgur.com/kNX57VH.png
+  
+- [react architecture]
+    https://i.imgur.com/WFm5I6M.png
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+API
+- https://openweathermap.org/current
 
-### `npm run build`
+### MVP/PostMVP
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+User type their City & can see followings:
+    Current weather image
+    Current weater temperatures & humidity & wind speed
+    How it looks like outside
+    Recommanadation for outfit for today, depends on the weather condition
+    Things to prepare before going outside (ex: umbrella if rainning outisde)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### MVP EXAMPLE
+- Find and use external api 
+- Render data on page 
+- Allow user to interact with the page
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Components
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Based on the initial logic defined in the previous sections try and breakdown the logic further into stateless/stateful components. 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| Component | Description | 
+| --- | :---: |  
+| App | This will make the initial data pull and include React Router| 
+| Images | Return weater image base on the data called| 
+| RightBottomRainCheck | Return outfit recommandation & things to pack before going outside base on the Feel-Like Temperature | 
+| RightBottomTempWarning| Return actual Feel-Like Temperature | 
+| TopRight| Weather outside decription & caution alert | 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Time Frames
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+| Component | Priority | Estimated Time | Time Invested | Actual Time |
+| --- | :---: |  :---: | :---: | :---: |
+| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
+| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
+| Total | H | 6hrs| 5hrs | 5hrs |
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Additional Libraries
+ Use this section to list all supporting libraries and their role in the project such as Axios, ReactStrap, D3, Bootstrap, Tailwind CSS, etc. 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Code Snippet
 
-### Code Splitting
+Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  Code snippet should not be greater than 10 lines of code. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+function reverse(string) {
+	// here is the code to reverse a string of text
+}
+```
 
-### Analyzing the Bundle Size
+## Issues and Resolutions
+ Use this section to list of all major issues encountered and their resolution.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### SAMPLE.....
+**ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
+**RESOLUTION**: Missing comma after first object in sources {} object
