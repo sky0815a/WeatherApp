@@ -16,6 +16,7 @@ Upload images of wireframes and component hierarchy to cloudinary (or similar) a
 
 - [wireframes]
     https://i.imgur.com/QUsAxBN.png
+    
     https://i.imgur.com/kNX57VH.png
   
 - [react architecture]
