@@ -8,7 +8,7 @@ A weather app that remind you not only the weather but also relevant outfits or 
 
 - https://github.com/sky0815a/WeatherApp
 - https://weather-app-sky0815a.vercel.app/
-- [demo recording]()
+- https://www.youtube.com/watch?v=3XLRvZCgCKE&ab_channel=sky0815a
 
 ## Wireframes & React Component Hierarchy
 
