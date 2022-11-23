@@ -26,7 +26,17 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className='Header'>Weather APP</h1>
+      <h1 className='Header'>Weather APP
+        <div className='search'>
+          <input
+            value={location}
+            onChange={event => setLocation(event.target.value)}
+            onKeyPress={searchLocation}
+            placeholder='Enter Location'
+            type='text' />
+        </div>
+      </h1>
+
       <div className='main'>
         {/* Left Top Components Start */}
         <div className='LeftTop'>
@@ -44,15 +54,6 @@ function App() {
 
         {/* Left Bottom Block Start */}
         <div className='LeftBottom'>
-          <div className='search'>
-            <input
-              value={location}
-              onChange={event => setLocation(event.target.value)}
-              onKeyPress={searchLocation}
-              placeholder='Enter Location'
-              type='text' />
-          </div>
-
           <div className="location">
             <p>{data.name}</p>
           </div>
@@ -76,7 +77,7 @@ function App() {
             <p>Wind Speed</p>
           </div>
         </div>
-        
+
         <div className='RightBottom'>
           <div>Today, it feels like</div>
           <div className="feels">
