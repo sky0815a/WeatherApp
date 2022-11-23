@@ -62,21 +62,18 @@ Based on the initial logic defined in the previous sections try and breakdown th
 | Total | H | 6hrs| 5hrs | 5hrs |
 
 ## Additional Libraries
- Use this section to list all supporting libraries and their role in the project such as Axios, ReactStrap, D3, Bootstrap, Tailwind CSS, etc. 
+ Axios, React
+
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  Code snippet should not be greater than 10 lines of code. 
+	Converting Temp Unit, F = (K - 273.15) * 1.8 + 32
+	Math.round((data.main.temp - 273.15) * 1.8 + 32)}F°
 
-```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
-```
 
 ## Issues and Resolutions
- Use this section to list of all major issues encountered and their resolution.
+	Poor artistic app decorations
 
-#### SAMPLE.....
-**ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
-**RESOLUTION**: Missing comma after first object in sources {} object
+
+## Future plahns
+	Making the serach bar functional with Zip code
