@@ -1,5 +1,6 @@
 function Images({ data }) {
     if (Object.keys(data).length > 0) {
+        // Get the data from the weater & return images
         if (data.weather[0].main === 'Thunderstorm') {
             return <img
                 src="https://images.unsplash.com/photo-1594760467013-64ac2b80b7d3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2232&q=80"
